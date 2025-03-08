@@ -1,0 +1,25 @@
+{
+  "name": "condomify",
+  "version": "1.0.0",
+  "description": "Este é o repositório do aplicativo Condomify, um sistema de gerenciamento de condomínios.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fahsohma/Condomify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fahsohma/Condomify/issues"
+  },
+  "homepage": "https://github.com/fahsohma/Condomify#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
+  }
+}
