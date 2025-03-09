@@ -1,0 +1,180 @@
+/* Estilos gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #032012;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 60px;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.logo {
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Menu sanduíche */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #025a44;
+  transition: left 0.3s;
+  z-index: 1000;
+  padding-top: 60px;
+}
+
+.menu.aberto {
+  left: 0;
+}
+
+.menu-conteudo {
+  padding: 20px;
+}
+
+.fechar-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.menu ul li {
+  margin: 15px 0;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Conteúdo da HOME */
+.conteudo {
+  padding: 20px;
+  margin-top: 60px;
+}
+
+/* Estilos específicos para a tela de cadastro de apartamento */
+.conteudo form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.conteudo form select,
+.conteudo form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Estilos para os botões */
+.conteudo form button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-bottom: 30px;
+}
+
+/* Botão Adicionar Morador */
+.conteudo form .botao-adicionar {
+  background-color: white;
+  color: #025a44;
+  border: 1px solid #025a44;
+}
+
+.conteudo form .botao-adicionar:hover {
+  background-color: #025a44;
+  color: white;
+}
+
+/* Botão Remover */
+.conteudo form .botao-remover {
+  background-color: white;
+  color: #f44336;
+  border: 1px solid #f44336;
+}
+
+.conteudo form .botao-remover:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Botão Cadastrar */
+.conteudo form .botao-cadastrar {
+  background-color: #025a44;
+  color: white;
+  border: 1px solid #025a44;
+}
+
+.conteudo form .botao-cadastrar:hover {
+  background-color: #032012;
+  border: 1px solid #032012;
+}
+
+/* Botão Atualizar Moradores */
+.conteudo form .botao-atualizar {
+  background-color: #025a44;
+  color: white;
+  border: 1px solid #025a44;
+}
+
+.conteudo form .botao-atualizar:hover {
+  background-color: #032012;
+  border: 1px solid #032012;
+}

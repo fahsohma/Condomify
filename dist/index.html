@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Apartamento</title>
+  <link rel="stylesheet" href="/styles.b61e60ae.css">
+<script src="/styles.b61e60ae.js"></script></head>
+<body>
+  <h1>Cadastro de Apartamento x Morador</h1>
+  <form id="cadastroForm">
+    <label for="nomeCondominio">Nome do Condomínio:</label>
+    <select id="nomeCondominio" name="nomeCondominio" required="">
+      <option value="">Selecione um condomínio</option>
+    </select>
+
+    <label for="bloco">Bloco:</label>
+    <input type="text" id="bloco" name="bloco" maxlength="50" required="">
+
+    <label for="apartamento">Apartamento:</label>
+    <input type="text" id="apartamento" name="apartamento" required="">
+
+    <div id="moradores">
+      <label>Moradores:</label>
+      <div class="morador">
+        <input type="text" name="moradorNome" placeholder="Nome do Morador" required="">
+        <input type="text" name="moradorTelefone" placeholder="Telefone" required="">
+      </div>
+    </div>
+    <button type="button" onclick="adicionarMorador()">Adicionar Morador</button>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <script type="module" src="/src.7ed060e2.js"></script>
+</body>
+</html>
