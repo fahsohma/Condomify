@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Importe o Link
 import Menu from './Menu';
 import './styles.css';
 
@@ -187,11 +188,13 @@ function CadastroApartamento() {
         <button className="menu-button" onClick={toggleMenu}>
           ☰
         </button>
-        <img
-          src="/CondomifyLogo.png"
-          alt="Condomify Logo"
-          className="logo"
-        />
+        <Link to="/"> {/* Adicione o Link aqui */}
+          <img
+            src="/CondomifyLogo.png"
+            alt="Condomify Logo"
+            className="logo"
+          />
+        </Link>
       </div>
 
       {/* Menu sanduíche */}
@@ -199,7 +202,7 @@ function CadastroApartamento() {
 
       {/* Conteúdo da tela de cadastro */}
       <div className="conteudo">
-        <h1>Cadastro de Apartamento x Morador</h1>
+        <h1 className="titulo-cadastro">CADASTRO DE APARTAMENTO X MORADOR</h1> {/* Adicione a classe aqui */}
         <form onSubmit={handleSubmit}>
           <label>Nome do Condomínio:</label>
           <select

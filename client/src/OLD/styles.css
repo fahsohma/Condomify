@@ -15,8 +15,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0;
+  left: 0;
+  right: 0;
   height: 60px;
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
 .menu-button {
@@ -31,6 +35,7 @@ body {
 .logo {
   height: 80px;
   position: absolute;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -90,7 +95,7 @@ body {
 /* Conteúdo da HOME */
 .conteudo {
   padding: 20px;
-  margin-top: 60px;
+  margin-top: 80px; /* Aumentei a margem para acomodar o cabeçalho fixo */
 }
 
 /* Estilos específicos para a tela de cadastro de apartamento */
@@ -177,4 +182,61 @@ body {
 .conteudo form .botao-atualizar:hover {
   background-color: #032012;
   border: 1px solid #032012;
+}
+
+/* Estilos para o título da página de cadastro */
+.titulo-cadastro {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #025a44;
+  text-transform: uppercase;
+  margin-top: 20px; /* Ajustei a margem superior */
+  margin-bottom: 20px;
+}
+
+/* Estilos para a lista de moradores */
+.lista-moradores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.morador-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.morador-card:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.morador-card.selecionado {
+  background-color: #025a44;
+  color: white;
+}
+
+.morador-nome {
+  font-weight: bold;
+  display: block;
+}
+
+.morador-telefone {
+  font-size: 14px;
+  color: #666;
+}
+
+.morador-card.selecionado .morador-telefone {
+  color: #ddd;
+}
+
+/* Espaçamento adicional para o botão Notificar */
+.botao-notificar {
+  margin-top: 20px; /* Adiciona um espaçamento acima do botão */
 }

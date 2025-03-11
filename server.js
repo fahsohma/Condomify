@@ -17,7 +17,10 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Conectar ao MongoDB
-mongoose.connect('mongodb+srv://fahsohma:Teka.2014@cluster0.oyhsb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+const password = encodeURIComponent('Teka.2014'); // Codificar a senha
+const mongoURI = `mongodb+srv://fahsohma:${password}@cluster0.oyhsb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+
+mongoose.connect(mongoURI)
   .then(() => console.log('Conectado ao MongoDB!'))
   .catch((err) => console.error('Erro ao conectar ao MongoDB:', err));
 
